@@ -1,4 +1,21 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm test
+echo 'Styling, testing and building your project before committing, please. JanDez'
+
+# Check tsconfig standards
+
+npm run check-types ||
+(
+    echo 'Failed Type check
+            Are you seriously trying to weite that? Make the changes required above, please. JanDez'
+    false;
+)
+
+# Check Prettier standards
+npm run check-format ||
+(
+    echo'It is fucking RAW - Your Styling looks disgusting manager
+            Prettier Check Failed. Rum "npm run format", add the necesaries and try to commit again. JanDez'
+    false;
+)
