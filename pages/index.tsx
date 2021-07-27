@@ -1,6 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import React from 'react'
+
+/*
+* This is the Home component
+*
+* @return {JSX.Element}: The JSX Code for home page
+*
+*/
 
 export default function Home() {
   return (
