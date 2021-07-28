@@ -1,7 +1,7 @@
 {
   "name": "nextjs-typescript-template",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,6 +15,7 @@
     "test-all": "npm run check-format && nom run check-lint && nom run check-types && npm run build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^11.0.1",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
