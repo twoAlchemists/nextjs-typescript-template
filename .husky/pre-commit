@@ -28,6 +28,13 @@ npm run check-lint ||
     false;
 )
 
+# # Check Lint Staged
+# npm run lint-stage ||
+# (
+#     echo 'You weak code  have been staged, that means that it's good to pass this pre-commit test';
+#     false;
+# )
+
 # If everything passes... Try to run a building
 echo 'Alright... This locks ok to me
         Looks like your code its good to go. Now we are trying to build that ugly son of a bitch right now'
