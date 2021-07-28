@@ -1,21 +1,43 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo 'Styling, testing and building your project before committing, please. JanDez'
+echo 'Styling, testing and building your project before committing, please. @JanDez';
 
 # Check tsconfig standards
 
 npm run check-types ||
 (
     echo 'Failed Type check
-            Are you seriously trying to weite that? Make the changes required above, please. JanDez'
+            Are you seriously trying to weite that? Make the changes required above, please. JanDez';
     false;
 )
 
-# Check Prettier standards
-npm run check-format ||
-(
-    echo'It is fucking RAW - Your Styling looks disgusting manager
-            Prettier Check Failed. Rum "npm run format", add the necesaries and try to commit again. JanDez'
-    false;
-)
+# # Check Prettier standards
+# npm run check-format ||
+# (
+#     echo'It is fucking RAW - Your Styling looks disgusting manager
+#             Prettier Check Failed. Rum "npm run format", add the necesaries and try to commit again. JanDez';
+#     false;
+# )
+
+# # Check ESLint standards
+# npm run check-lint ||
+# (
+#     echo 'Get that weak ugly peace of shitty code out of here
+#             ESLint Check failed. Make the required listed above, add changes and try to commit again';
+#     false;
+# )
+
+# # If everything passes... Try to run a building
+# echo 'Alright... This locks ok to me
+#         Looks like your code its good to go. Now we are trying to build that ugly son of a bitch right now'
+
+# npm run build || 
+# (
+#     echo 'Better Call Soul, cause your build just failed... This is so sad
+#             Next build failed: View the errors above to see why'
+#     false;
+# )
+
+# # If it builds we can commit
+# echo 'Allright, you win this round, we are committing that crap now'
